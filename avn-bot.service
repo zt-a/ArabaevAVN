@@ -1,0 +1,15 @@
+[Unit]
+Description=AVN Telegram Bot
+After=network.target
+
+[Service]
+Type=simple
+User=zhyrgal
+WorkingDirectory=/home/zhyrgal/ArabaevAVN
+Environment=PATH=/home/zhyrgal/ArabaevAVN/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ExecStart=/home/zhyrgal/ArabaevAVN/venv/bin/python /home/zhyrgal/ArabaevAVN/main.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
