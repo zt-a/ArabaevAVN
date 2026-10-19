@@ -46,7 +46,7 @@ jobs:
             git fetch --all
             git reset --hard origin/main
             ./venv/bin/pip install -q -r requirements.txt
-            sudo -n cp avn-bot.service /etc/systemd/system/avn-bot.service
+            sudo -n cp /home/zhyrgal/ArabaevAVN/avn-bot.service /etc/systemd/system/avn-bot.service
             sudo -n systemctl daemon-reload
             sudo -n systemctl restart avn-bot
             sleep 3
